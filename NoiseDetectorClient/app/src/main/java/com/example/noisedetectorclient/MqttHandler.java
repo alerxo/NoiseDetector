@@ -90,7 +90,7 @@ public class MqttHandler {
     private void OnMessage(String topic, String message)
     {
         switch (topic) {
-            case "sensor":
+            case "group29/sound":
                 String cleaned = message.replaceAll("[^0-9]", "");
 
                 if(!cleaned.isEmpty()) {

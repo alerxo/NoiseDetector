@@ -35,6 +35,7 @@ android {
         buildConfigField("String", "MQTT_PASS", "\"${env["PASS"]}\"")
         buildConfigField("String", "MQTT_URL", "\"${env["URL"]}\"")
         buildConfigField("int", "MQTT_PORT", env["PORT"].toString())
+        buildConfigField("String", "CLAUDE_API_KEY", "\"${env["CLAUDE_API_KEY"]}\"")
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -83,4 +84,5 @@ dependencies {
     implementation("org.eclipse.paho:org.eclipse.paho.android.service:1.1.1")
     implementation("androidx.localbroadcastmanager:localbroadcastmanager:1.1.0")
     implementation("com.hivemq:hivemq-mqtt-client:1.3.9")
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
 }
